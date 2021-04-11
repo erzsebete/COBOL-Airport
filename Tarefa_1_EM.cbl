@@ -1,0 +1,305 @@
+      ******************************************************************
+      * Author: Elisabete Monteiro
+      * Date: Abril/2021
+      ******************************************************************
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. TAREFA8.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+
+        77 HORAPARTIDA             PIC 9(02) VALUES ZEROS.
+        77 MINUTOPARTIDA           PIC 9(02) VALUES ZEROS.
+        77 HORADURACAO             PIC 9(02) VALUES ZEROS.
+        77 MINUTODURACAO           PIC 9(02) VALUES ZEROS.
+        77 HORACHEGADA             PIC 9(02) VALUES ZEROS.
+        77 MINUTOCHEGADA           PIC 9(02) VALUES ZEROS.
+        77 SIM                     PIC 9(01) VALUES ZEROS.
+        77 RESPOSTA                PIC A(03) VALUES SPACES.
+
+
+       PROCEDURE DIVISION.
+      *-------------------CABECALHO AEROPORTO---------------------------
+
+      *-------------LINHA 1---------
+            DISPLAY "0" AT 0303
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0304
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0308
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0309
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0310
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0313
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0314
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0315
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0320
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0321
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0325
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0326
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0327
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0332
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0333
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0337
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0338
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0339
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0342
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0343
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0344
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0345
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0346
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0349
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0350
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+      *---------------LINHA 2 ----------------
+            DISPLAY "0" AT 0402
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0405
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0408
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0413
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0416
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0419
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0422
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0425
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0428
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0431
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0434
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0437
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0440
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0444
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0448
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0451
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+      *---------------LINHA 3 ----------------
+            DISPLAY "0" AT 0502
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0503
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0504
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0505
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0508
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0509
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0510
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0513
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0514
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0515
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0519
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0522
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0525
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0526
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0527
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0531
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0534
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0537
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0538
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0539
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0544
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0548
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0551
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+      *---------------LINHA 4 ----------------
+            DISPLAY "0" AT 0602
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0605
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0608
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0613
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0616
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0619
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0622
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0625
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0631
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0634
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0637
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0640
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0644
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0648
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0651
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+      *---------------LINHA 5 ----------------
+            DISPLAY "0" AT 0702
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0705
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0708
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0709
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0710
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0713
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0716
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0720
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0721
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0725
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0732
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0733
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0737
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0740
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0744
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0749
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+            DISPLAY "0" AT 0750
+            FOREGROUND-COLOR 6 HIGHLIGHT.
+
+      *--------------------- CALCULO DO HORARIO ------------------------
+       CALCULARVOO.
+           DISPLAY "PARTIDA" AT 1108
+           FOREGROUND-COLOR 3 HIGHLIGHT.
+           DISPLAY "HORAS:" AT 1308
+           FOREGROUND-COLOR 6 HIGHLIGHT.
+           DISPLAY "MINUTOS:" AT 1325
+           FOREGROUND-COLOR 6 HIGHLIGHT.
+           DISPLAY "DURACAO DO VOO" AT 1608
+           FOREGROUND-COLOR 3 HIGHLIGHT.
+           DISPLAY "HORAS:" AT 1808
+           FOREGROUND-COLOR 6 HIGHLIGHT.
+           DISPLAY "MINUTOS:" AT 1825
+           FOREGROUND-COLOR 6 HIGHLIGHT.
+
+       LER-HORAPARTIDA.
+
+           ACCEPT HORAPARTIDA AT 1316.
+
+           IF (HORAPARTIDA > 23) THEN
+               GO LER-HORAPARTIDA
+               END-IF.
+
+       LER-MINUTOPARTIDA.
+
+           ACCEPT MINUTOPARTIDA AT 1334.
+
+            IF (MINUTOPARTIDA > 59) THEN
+               GO LER-MINUTOPARTIDA
+               END-IF.
+
+       LER-HORADURACAO.
+           ACCEPT HORADURACAO AT 1816.
+
+           IF (HORADURACAO > 23) THEN
+               GO LER-HORADURACAO
+               END-IF.
+
+       LER-MINUTODURACAO.
+
+           ACCEPT MINUTODURACAO AT 1834.
+
+           IF (MINUTODURACAO > 59) THEN
+               GO LER-HORADURACAO
+               END-IF.
+
+           COMPUTE HORACHEGADA = (HORAPARTIDA + HORADURACAO)
+           COMPUTE MINUTOCHEGADA = (MINUTOPARTIDA + MINUTODURACAO)
+           IF (MINUTOCHEGADA > 59) THEN
+               COMPUTE MINUTOCHEGADA = (MINUTOCHEGADA - 60)
+               COMPUTE HORACHEGADA = (HORACHEGADA + 1)
+               COMPUTE SIM = 1
+           END-IF.
+
+           IF (HORACHEGADA > 23)
+               COMPUTE HORACHEGADA = (HORACHEGADA - 24)
+           END-IF.
+
+           IF (SIM = 1)
+             DISPLAY "CHEGADA NO DIA SEGUINTE" AT 2108
+             FOREGROUND-COLOR 5 HIGHLIGHT
+           ELSE
+             DISPLAY "CHEGADA" AT 2108
+             FOREGROUND-COLOR 5
+             HIGHLIGHT
+           END-IF.
+
+           DISPLAY "HORAS:" AT 2308
+           FOREGROUND-COLOR 5 HIGHLIGHT.
+           DISPLAY "MINUTOS" AT 2325
+           FOREGROUND-COLOR 5 HIGHLIGHT.
+           DISPLAY HORACHEGADA AT 2316.
+           DISPLAY MINUTOCHEGADA AT 2334.
+
+           DISPLAY "CALCULAR CHEGADA DE NOVO VOO? (SIM/NAO)" AT 2608
+           FOREGROUND-COLOR 1 HIGHLIGHT.
+
+           ACCEPT RESPOSTA AT 2648.
+
+           IF (RESPOSTA = "SIM" or "Sim" or "sim")
+             GO CALCULARVOO
+           END-IF.
+
+       STOP RUN.
+       END PROGRAM TAREFA8.
